@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Generative AI App</title>
+</head>
+<body>
+<h1>Pose une question à l'IA</h1>
+<form action="/ask" method="post">
+    <input type="text" name="question" placeholder="Ex: Donne-moi une idée" size="50"/>
+    <button type="submit">Envoyer</button>
+</form>
+
+<div th:if="${response}">
+    <h2>Réponse :</h2>
+    <p th:text="${response}"></p>
+</div>
+</body>
+</html>
